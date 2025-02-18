@@ -1,0 +1,27 @@
+<script>
+class abc
+{
+	// javascript build in func which call automatic
+	constructor(a,b){  
+		this.a=a;
+		this.b=b;		
+	}
+	sum()
+	{
+		var sum;
+		sum=this.a+this.b;
+		document.write("<h1>" + sum + "</h1>");
+	}
+	multi()
+	{
+		var multi;
+		multi=this.a*this.b;
+		document.write("<h1>" + multi + "</h1>");
+	}
+}
+var obj=new abc(5,8);
+obj.sum();
+obj.multi();
+</script>
+
+

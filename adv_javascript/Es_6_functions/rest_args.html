@@ -5,41 +5,34 @@
 <h2>JavaScript Function Rest Parameter</h2>
 
 <p>The rest parameter (...) allows a function to treat an indefinite number of arguments as an array:</p>
-
-<p id="demo"></p>
-
 <script>
 
-
-
+/*
 function data(a,b,c,d)
 {
 		document.write(a + "<br>" + b + "<br>" + c + "<br>" + d + "<br>")
 }
-
 data(1, 2, 3, 4); //we can provide inifite numbers as argument
+*/
 
-
-
-function addAll(...data)
+/*
+function data(...abc)
 {
-    for (var i = 0; i<data.length; i++)
-	{    
-		document.write(data[i] + "<br>")
-    }
+	for(var i=0;i<abc.length;i++)
+	{
+		document.write("<h6>"+ abc[i] + "</h6>"); 
+	}
 }
-
-addAll(1,5,6,7,8,9,10,5,8); //we can provide inifite numbers as argument
-
-//all given argument store in default variable name called (arguments)
-function argumentsDefault()
+data(1, 2, 3, 4, 5, 6, 7 ,8); //we can provide inifite numbers as argument
+*/
+function data()
 {
-  document.write(arguments[5])
+	for(var i=0;i<arguments.length;i++)
+	{
+		document.write("<h6>"+ arguments[i] + "</h6>"); 
+	}
 }
-argumentsDefault(1, 2, 3, 4, 5,6,7,8); //we can provide inifite numbers as argument
-
-
-
+data(1, 2, 3, 4, 5, 6, 7 ,8); //we can provide inifite numbers as argument
 
 
 </script>

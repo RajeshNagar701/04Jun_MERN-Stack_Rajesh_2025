@@ -22,9 +22,17 @@ The ... Operator
 
 
 loop
-For/of
+
+For of / For In
 Map Objects
 Set Objects
+filter
+foreach
+every
+
+
+
+
 
 Classes
 Promises
@@ -56,6 +64,9 @@ JavaScript Modules
 
 
 <script>
+
+
+
 /*
 Let
 
@@ -69,7 +80,7 @@ Variables declared with let cannot be Redeclared in the same scope
 */
 
 {
-  let x = 2;
+  let x = 2;   // local 
 }
 // x can NOT be used here
 
@@ -83,6 +94,13 @@ Global Scope
 Variables declared with the var always have Global Scope.
 
 Variables declared with the var keyword can NOT have block scope:
+
+
+var a;
+
+a=50;
+
+
 */
 
 
@@ -104,7 +122,6 @@ PI = PI + 10;   // This will also give an error
 
 
 const PI = 3.14159265359; // correct
-
 const PI;
 PI = 3.14159265359; // Incorrect
 

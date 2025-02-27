@@ -16,7 +16,7 @@
   <body>
     
     <div class="container">
-	  <div id="loading" class="spinner-border text-muted mt-5"></div>		
+	  <div class="spinner-border" id="spin"></div>	
       <div class="row" id="btn"></div>
     </div>
     <script>
@@ -27,9 +27,9 @@
 	  {
 		for(const myData of data) 
 		{
-		  let htmlData = ` <div class="col-md-3">
+		  let htmlData = `<div class="col-md-3">
 			<div class="card">
-			  <img src="${myData.thumbnailUrl}" class="card-img-top" alt="" />
+			  <img src="${myData.url}" class="card-img-top" alt="" />
 			  <div class="card-body">
 				<h5 class="card-title">${myData.title}</h5>
 			  </div>
@@ -45,21 +45,12 @@
 		return response.json();
 	  })
 	  .then((data) => {
-		showData(data)
-		document.getElementById('loading').style.display="none";
+		showData(data);
+		document.getElementById('spin').style.display="none";
 	  })
 	  .catch((err) => console.log(err));
 	  
-	fetch("https://beaidal.com/view_contacts.php")
-	  .then((response) => {
-		return response.json();
-	  })
-	  .then((res) => {
-		console.log(res);
-	  })
-	  .catch((err) => console.log(err));  
-	  
-	  
+	
       
     </script>
     

@@ -1,0 +1,61 @@
+<!--
+JavaScript variables can belong to the local or global scope.
+
+Global variables can be made local (private) with closures.
+
+A local variable can only be used inside the function where it is defined. It is hidden from other
+functions and other scripting code.
+
+Variable name without declaration keyword (var, let or const) are always global, even if they are
+created inside a function
+
+-->
+
+<script>
+
+/*
+let counter = 0;
+function add() 
+{
+  counter += 1;
+  document.write(counter);
+}
+add();
+add();
+add();
+
+document.write(counter);
+
+*/
+
+/*
+let counter = 0;
+function add() 
+{
+  let counter = 0;	
+  counter += 1;
+  document.write(counter);
+}
+add();
+add();
+add();
+*/
+//document.write(counter);
+
+</script>
+
+
+<script>
+const add = (function(){
+	let counter=0;
+	
+	return function(){
+		counter+=1;
+		document.write(counter);
+	}
+})();
+
+add();
+add();
+add();
+</script>

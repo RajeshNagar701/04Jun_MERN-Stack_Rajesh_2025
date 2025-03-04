@@ -1,0 +1,53 @@
+<!--
+With the call() method, you can write a method that can be used on different objects.
+
+The call() method is a predefined JavaScript method.
+
+It can be used to invoke (call) a method with an owner object as an argument (parameter).
+
+With call(), an object can use a method belonging to another object.
+
+-->
+
+<script>
+
+/*
+const person = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function () {
+		return this.firstName + " " + this.lastName;
+  }
+}
+
+// This will return "John Doe":
+document.write(person.firstName); 
+
+document.write(person.fullName());  
+*/
+
+//========================================================
+
+const person1 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+
+const person2 = {
+  firstName:"Mary",
+  lastName: "nagar"
+}
+
+const person = {
+  email:"rajnagar@gmail.com",	
+  fullName: function() {
+    return this.firstName + this.lastName;
+  }
+}
+
+//document.write(person.email);
+//document.write(person.fullName());
+
+document.write(person.fullName.call(person1) + "<br>")
+document.write(person.fullName.call(person2) + "<br>")
+</script>

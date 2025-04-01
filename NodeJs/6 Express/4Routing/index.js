@@ -28,7 +28,8 @@ app.get('/blog',(req,res)=>{
 
 app.get('/argument',(req,res)=>{
 	console.log('Data sent by Browser', req.query) // get object
-	res.send(`<h1>Hello argument : ${req.query.name} </h1>`);
+	res.send(`<h1>Hello argument : ${req.query.name}</h1>`);
+	
 })
 
 

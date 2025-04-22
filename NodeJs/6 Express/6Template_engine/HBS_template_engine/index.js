@@ -36,16 +36,21 @@ const express=require('express');
 const app=express();
 const hbs = require('hbs');
 
-app.use(express.static('public'));
+
 
 app.set('view engine', 'hbs');  // app.set('view engine','ejs')
-hbs.registerPartials(__dirname + '/views/partials/')
 
 // 1 static code 
 
 app.get('/send',(_,resp)=>{
     resp.send(`<h1>Hello i am static code </h1>`)
 });
+
+
+
+
+
+
 
 
 // 2  static page call & want path stattic page
@@ -61,7 +66,15 @@ app.get('/sendFile',(_,resp)=>{
 
 
 
+
+
+
+
 // 3 get hbs template page from views  
+
+
+app.use(express.static('public'));
+hbs.registerPartials(__dirname + '/views/partials/');
 
 app.get('/',(_,resp)=>{
     resp.render('index');
